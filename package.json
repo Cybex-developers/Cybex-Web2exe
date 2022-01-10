@@ -16,6 +16,6 @@
     "author": "Cybex Studios",
     "license": "MIT",
     "bin" : {
-        "v" : "./bin/version.js"
+        "cwe" : "./app/index.js"
     }
 }
