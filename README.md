@@ -13,4 +13,6 @@ Use command ```cwe --run``` to test your app
 
 |parameter|input value|Usage|
 |----|-----|-------|
+|height|number|specifies the height of the window|
+|width|number|specifies the width of the window|
 |start-maximized|true/false|tells whether the app has to started maximized or not|
