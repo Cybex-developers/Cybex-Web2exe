@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
 const arg = process.argv;
+const {launch} = require('chrome-runner');
+const path = require("path")
+__dirname = path.resolve();
 
 if (arg.includes("--run")) {
     const fs = require('fs');
@@ -9,17 +12,24 @@ if (arg.includes("--run")) {
 
         if (data.app != null) {
             if (fs.existsSync(data.app)) {
-                const {launch} = require('chrome-runner');
-                const path = require("path")
-                __dirname = path.resolve();
-            
-                const runner = launch(
-                    {"startupPage": __dirname + data.app,
-                    "chromeFlags": ["--app="+ __dirname + data.app]
-                });
-                setTimeout(() => {
-                    process.exit()
-                }, 2);
+                if (data.start_maximized == true) {
+                    const runner = launch(
+                        {"startupPage": __dirname + data.app,
+                        "chromeFlags": ["--app="+ __dirname + data.app,"--start-maximized"]
+                    });
+                    setTimeout(() => {
+                        process.exit()
+                    }, 2);
+                }
+                else{
+                    const runner = launch(
+                        {"startupPage": __dirname + data.app,
+                        "chromeFlags": ["--app="+ __dirname + data.app]
+                    });
+                    setTimeout(() => {
+                        process.exit()
+                    }, 2);
+                }
             }
             else{
                 console.log("Please specify the correct html file location.");
