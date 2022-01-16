@@ -21,7 +21,13 @@ Run command `cwe --run` to test your app
 {
     "app": "./public/index.html",
     "start_maximized": false,
-    "width":"600",
-    "height":"440"
+    "width": "600",
+    "height": "440"
 }
 ```
+
+## Steps to build executable
+1. run `npm init`,it will create package.json file in the root of your app. Ignore if already has package.json in the root your of your app 
+2. run command `npm i chrome-runner path --save`.
+3. run command `cwe --build` to build executable.
+
