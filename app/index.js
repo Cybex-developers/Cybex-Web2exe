@@ -13,7 +13,7 @@ if (arg.includes("--run")) {
 
         if (data.app != null) {
             if (fs.existsSync(data.app)) {
-                let parameters = ["--app="+ __dirname + data.app]
+                let parameters = ["--app="+ __dirname + data.app,"--disable-web-security","--disable-gpu","--allow-file-access-from-files"]
                 if (data.start_maximized == true) {
                     parameters.push(" --start-maximized")
                 }
@@ -34,14 +34,13 @@ if (arg.includes("--run")) {
                         parameters.push(" --window-size=" + data.width + ",600")
                     }
                 }
-
                 setTimeout(() => {
                     const runner = launch(
                         {"startupPage": __dirname + data.app,
                         "chromeFlags": parameters
                     });
                     setTimeout(() => {
-                            process.exit()
+                        process.exit()
                     }, 2);
                 }, 2);
             }
@@ -57,10 +56,14 @@ if (arg.includes("--run")) {
         console.log("settings.json does not exist \nCreate a settings.json to continue \nfor more details kindly go to the official website");
     }
 }
-if (arg.includes("--v") || arg.includes("--version")) {
+else if (arg.includes("--v") || arg.includes("--version")) {
     console.log("v2022.1");
 }
-if (arg.includes("--build")) {
+else if (arg.includes("--help")) {
+    console.log("v2022.1");
+}
+else if (arg.includes("--build")) {
+    console.log("reading settings.json");
     const data = JSON.parse(fs.readFileSync("./settings.json"));
 
     if (data.app != null) {
@@ -102,9 +105,21 @@ if (arg.includes("--build")) {
         setTimeout(() => {
             process.exit()
         }, 2);`
-                        fs.writeFileSync("./cwe.js",text,"utf8")
-                        exec(["cwe.js","--target","node12-win-x64","--output",data.name + ".exe"]);
+                        console.clear()
+                        console.log("reading settings.json successful.");
+                        console.log("creating necessary files.");
+                        fs.writeFileSync("./cwe.js",text,"utf8");
+                        console.clear()
+                        console.log("reading settings.json successful.");
+                        console.log("creating necessary files successful.");
+                        console.log("building executable");
+                        exec(["cwe.js","--target","node12-win-x64","--output",data.name + ".exe"]).then(function () {
+                            console.clear();
+                            console.log("build successful")
+                        })
+                        
                 }, 2);
+
             }
             else{
                 console.log("Please specify the name of your application in settings.json");
@@ -117,4 +132,8 @@ if (arg.includes("--build")) {
     else{
         console.log("Please specify the html file using 'app':'fileLocation'");
     }
+}
+else {
+    console.log(`please enter a valid argument, all available arguments are\n
+ --v\n --version\n --help\n --build\n --run`);
 }
