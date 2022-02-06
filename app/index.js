@@ -115,6 +115,7 @@ else if (arg.includes("--build")) {
                         console.log("building executable");
                         exec(["cwe.js","--target","node12-win-x64","--output",data.name + ".exe"]).then(function () {
                             console.clear();
+                            fs.unlinkSync("./cwe.js")
                             console.log("build successful")
                         })
                         

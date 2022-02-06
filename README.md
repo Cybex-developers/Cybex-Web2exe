@@ -31,3 +31,5 @@ Run command `cwe --run` to test your app
 2. run command `npm i chrome-runner path --save`.
 3. run command `cwe --build` to build executable.
 
+## What's new:
+Automatically clears the cache after the build!!
