@@ -71,29 +71,29 @@ else if (arg.includes("--build")) {
     if (data.app != null) {
         if (fs.existsSync(data.app)) {
             if (data.name != null) {
-                let parameters = []
+                parameters = `["--app=" + __dirname + "` + data.app + `"`;
                 if (data.start_maximized == true) {
-                    parameters.push(" --start-maximized")
+                    parameters = parameters + `," --start-maximized"`
                 }
                 if (data.height != null) {
                     if (parseInt(data.height) != "NaN") {
                         if (data.width != null) {
                             if (parseInt(data.width) != "NaN") {
-                                parameters.push(" --window-size="+ data.width +"," + data.height)
+                                parameters = parameters + (`," --window-size=`+ data.width + `,` + data.height + `"`)
                             }
                         }
                         else if (data.width == null) {
-                            parameters.push(" --window-size=600," + data.height)
+                            parameters = parameters + (`," --window-size=600,` + data.height + `"`)
                         }
                     }
                 }
                 if (data.width != null) {
                     if (data.height == null) {
-                        parameters.push(" --window-size=" + data.width + ",600")
+                        parameters = parameters + (`," --window-size=` + data.width + `,600"`)
                     }
                 }
+                parameters = parameters + "]"
                 setTimeout(() => {
-                        parameters = `["--app=" + __dirname + "` + data.app + `"]`;
         
                         let text = `
         const {launch} = require('chrome-runner');

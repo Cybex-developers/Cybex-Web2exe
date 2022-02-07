@@ -43,4 +43,5 @@ Run command `cwe --run` to test your app
 
 ## What's new:
 Automatically clears the cache after the build!!<br>
-5 New paramters i.e. name,author,description,version,copyright!!
+5 New paramters i.e. name,author,description,version,copyright!!<br>
+Major Bug Fixed :-)
