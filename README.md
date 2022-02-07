@@ -42,4 +42,5 @@ Run command `cwe --run` to test your app
 3. run command `cwe --build` to build executable.
 
 ## What's new:
-Automatically clears the cache after the build!!
+Automatically clears the cache after the build!!<br>
+5 New paramters i.e. name,author,description,version,copyright!!
