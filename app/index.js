@@ -37,18 +37,13 @@ if (arg.includes("--run")) {
                     }
                 }
                 setTimeout(() => {
-                    const fileDir = __dirname + data.app.toString().substr(1,data.app.toString().length).replace(/\//g,"\\")
-                    fs.readFile(fileDir,"utf8",function (err,datar) {
-                        fs.writeFile(fileDir,"<script src='./cwe-client.js'></script>\n"+datar,function () {
-                            const runner = launch(
-                                {"startupPage": __dirname + data.app,
-                                "chromeFlags": parameters
-                            });
-                            setTimeout(() => {
-                                process.exit()
-                            }, 2);
-                        })
-                    })
+                    const runner = launch(
+                        {"startupPage": __dirname + data.app,
+                        "chromeFlags": parameters
+                    });
+                    setTimeout(() => {
+                        process.exit()
+                    }, 2);
                 }, 2);
             }
             else{

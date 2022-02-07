@@ -27,7 +27,7 @@ Run command `cwe --run` to test your app
     "name": "Cybex Web2exe",
     "author": "Cybex Studios",
     "description": "A full fledged node module to make windows apps with web technologies like HTML,CSS,Javascript etc.",
-    "version": "2022.2.1",
+    "version": "2022.2.2",
     "copyright": "Copyright (c) Cybex Studios 2022",
     "app": "./public/index.html",
     "start_maximized": false,
