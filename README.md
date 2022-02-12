@@ -27,7 +27,7 @@ Run command `cwe --run` to test your app
     "name": "Cybex Web2exe",
     "author": "Cybex Studios",
     "description": "A full fledged node module to make windows apps with web technologies like HTML,CSS,Javascript etc.",
-    "version": "2022.2.2",
+    "version": "2022.2.4",
     "copyright": "Copyright (c) Cybex Studios 2022",
     "app": "./public/index.html",
     "start_maximized": false,
@@ -44,4 +44,5 @@ Run command `cwe --run` to test your app
 ## What's new:
 Automatically clears the cache after the build!!<br>
 5 New paramters i.e. name,author,description,version,copyright!!<br>
-Major Bug Fixed :-)
+Major Bug Fixed :-)<br>
+Security Update
