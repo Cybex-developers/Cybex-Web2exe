@@ -4,9 +4,6 @@ make a settings.json file in the root of the app
 
 write `{ "app" : "HTML-File-Location" }` and 
 
-Run command `cwe --run` to test your app
-
-
 ## Parameters in Settings.json
 
 |parameter|input value|Usage|
@@ -36,10 +33,18 @@ Run command `cwe --run` to test your app
 }
 ```
 
+## Steps to test/run your app:
+1. move the "cwe-client.js" file to the place where your html file is located.
+2. Add this line to your code `<script src="./cwe-client.js"></script>` 
+
 ## Steps to build executable
 1. run `npm init`,it will create package.json file in the root of your app. Ignore if already has package.json in the root your of your app 
 2. run command `npm i chrome-runner path --save`.
 3. run command `cwe --build` to build executable.
 
-## What will be new in a few days:
-Many more features like disabling resize, disabling dev tools, other chrome shortcut keys.
+
+## What is new as promised:
+No new need to face useless chrome shortcuts and control over some useful chrome shortcuts.
+
+## What will be new :
+disabling resize.

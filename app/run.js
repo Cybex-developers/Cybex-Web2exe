@@ -3,6 +3,7 @@
 const {launch} = require('chrome-runner');
 const path = require("path")
 const fs = require('fs');
+const cFile = require("./files.js")
 __dirname = path.resolve();
 
 module.exports = function () {
@@ -32,6 +33,7 @@ module.exports = function () {
                         parameters.push(" --window-size=" + data.width + ",600")
                     }
                 }
+                cFile()
                 setTimeout(() => {
                     const runner = launch(
                         {"startupPage": __dirname + data.app,
