@@ -29,7 +29,16 @@ write `{ "app" : "HTML-File-Location" }` and
     "app": "./public/index.html",
     "start_maximized": false,
     "width": "600",
-    "height": "440"
+    "height": "440",
+    "keys":{
+        "zoom": false,
+        "reload": true,
+        "exit": false,
+        "find": true,
+        "print": false,
+        "fullscreen": false
+    },
+    "devtools":true
 }
 ```
 
@@ -44,7 +53,8 @@ write `{ "app" : "HTML-File-Location" }` and
 
 
 ## What is new as promised:
-No new need to face useless chrome shortcuts and control over some useful chrome shortcuts.
+No new need to face useless chrome shortcuts and control over some useful chrome shortcuts.<br>
+Updated documentation.
 
 ## What will be new :
 disabling resize.
