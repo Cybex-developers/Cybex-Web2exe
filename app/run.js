@@ -33,7 +33,7 @@ module.exports = function () {
                         parameters.push(" --window-size=" + data.width + ",600")
                     }
                 }
-                cFile()
+                cFile(data.app)
                 setTimeout(() => {
                     const runner = launch(
                         {"startupPage": __dirname + data.app,

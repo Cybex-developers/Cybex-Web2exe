@@ -5,6 +5,7 @@ const {exec} = require("pkg");
 const fs = require('fs');
 const PELibrary = require('pe-library');
 const ResEdit = require('resedit');
+const cFile = require("./files.js")
 __dirname = path.resolve();
 
 module.exports = function () {
@@ -35,7 +36,8 @@ module.exports = function () {
                             parameters = parameters + (`," --window-size=` + data.width + `,600"`)
                         }
                     }
-                    parameters = parameters + "]"
+                    parameters = parameters + "]";
+                    cFile(data.app)
                     setTimeout(() => {
             
                             let text = `

@@ -24,7 +24,7 @@ write `{ "app" : "HTML-File-Location" }` and
     "name": "Cybex Web2exe",
     "author": "Cybex Studios",
     "description": "A full fledged node module to make windows apps with web technologies like HTML,CSS,Javascript etc.",
-    "version": "2022.2.4",
+    "version": "2022.2.9",
     "copyright": "Copyright (c) Cybex Studios 2022",
     "app": "./public/index.html",
     "start_maximized": false,
@@ -38,23 +38,25 @@ write `{ "app" : "HTML-File-Location" }` and
         "print": false,
         "fullscreen": false
     },
-    "devtools":true
+    "devtools": true,
+    "resize": true
 }
 ```
 
 ## Steps to test/run your app:
-1. move the "cwe-client.js" file to the place where your html file is located.
-2. Add this line to your code `<script src="./cwe-client.js"></script>` 
+1. Add this line to the top of your main html file `<script src="./cwe-client.js"></script>` 
 
 ## Steps to build executable
 1. run `npm init`,it will create package.json file in the root of your app. Ignore if already has package.json in the root your of your app 
 2. run command `npm i chrome-runner path --save`.
 3. run command `cwe --build` to build executable.
 
+## What's new :
+disabling resize. <br>
+automated generaton of cwe-client.js file to the location of html file
 
-## What is new as promised:
-No new need to face useless chrome shortcuts and control over some useful chrome shortcuts.<br>
-Updated documentation.
+## What will be new in v2022.3:
+1. Use of Node.js functions from an external file somehow like a middler.
 
-## What will be new :
-disabling resize.
+## Note :
+This is the last release of v2022.2
