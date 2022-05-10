@@ -55,8 +55,8 @@ write `{ "app" : "HTML-File-Location" }` and
 disabling resize. <br>
 automated generaton of cwe-client.js file to the location of html file
 
-## What will be new in v2022.3:
-1. Use of Node.js functions from an external file somehow like a middler.
+## What will be new:
+1. A complete disgning library
 
 ## Note :
-This is the last release of v2022.2
+Extremely sorry but even after hard efforts we are not able to add the feature of Node.js functions from an external file somehow like a middler.
