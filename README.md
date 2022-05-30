@@ -52,8 +52,7 @@ write `{ "app" : "HTML-File-Location" }` and
 3. run command `cwe --build` to build executable.
 
 ## What's new :
-disabling resize. <br>
-automated generaton of cwe-client.js file to the location of html file
+Major Bug Fixed
 
 ## What will be new:
 1. A complete disgning library
