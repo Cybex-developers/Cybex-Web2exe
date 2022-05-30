@@ -12,6 +12,18 @@ module.exports = function (Htmlfile) {
         if(Fdata.keys.fullscreen != false){Fdata.keys.fullscreen = true};
         if(Fdata.keys.print != false){Fdata.keys.print = true};
     }
+    else{
+        Fdata = {
+            keys : {
+                reload : true,
+                zoom : true,
+                fullscreen : true,
+                exit : true,
+                find : true,
+                print : true
+            }
+        }
+    }
     if(Fdata.devtools != false){Fdata.devtools = true};
     let fileLocation = Htmlfile.substr(0,Htmlfile.lastIndexOf("\\"))
     fileLocation = Htmlfile.substr(0,Htmlfile.lastIndexOf("/"))
