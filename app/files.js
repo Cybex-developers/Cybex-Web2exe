@@ -3,7 +3,7 @@ const fs = require('fs');
 __dirname = path.resolve();
 
 module.exports = function (Htmlfile) {
-    const Fdata = JSON.parse(fs.readFileSync("./settings.json"));
+    let Fdata = JSON.parse(fs.readFileSync("./settings.json"));
     if(Fdata.keys){
         if(Fdata.keys.reload != false){Fdata.keys.reload = true};
         if(Fdata.keys.zoom != false){Fdata.keys.zoom = true};
