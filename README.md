@@ -55,7 +55,5 @@ write `{ "app" : "HTML-File-Location" }` and
 Major Bug Fixed
 
 ## What will be new:
-1. A complete disgning library
-
-## Note :
-Extremely sorry but even after hard efforts we are not able to add the feature of Node.js functions from an external file somehow like a middler.
+1. Website with all the needed guide
+2. A complete designing library
