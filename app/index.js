@@ -4,8 +4,13 @@ const arg = process.argv;
 const run = require("./run.js");
 const build = require("./build.js");
 const extras = require("./extras.js");
+const create = require("./create.js");
+
 if (arg.includes("--run")) {
     run()
+}
+else if (arg.includes("--create")) {
+    create()
 }
 else if (arg.includes("--v") || arg.includes("--version")) {
     extras.cwe_version()

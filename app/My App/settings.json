@@ -1,0 +1,10 @@
+{
+    "name": "My App",
+    "author": "Cybes Studios",
+    "description": "A demo app made for testing purpose.",
+    "copyright": "Copyright (c) Cybex Studios 2022",
+    "version": "2022.1.1",
+    "app": "./index.html",
+    "height": 440,
+    "width": 600
+}
