@@ -1,6 +1,6 @@
 const path = require("path")
-const fs = require('fs');
-const name = require("./")
+const fs = require("fs");
+
 __dirname = path.resolve();
 module.exports = function (Htmlfile) {
     let Fdata = JSON.parse(fs.readFileSync("./settings.json"));
