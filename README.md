@@ -2,7 +2,7 @@
 
 make a settings.json file in the root of the app
 
-write `{ "app" : "HTML-File-Location" }` and 
+write `{ "app" : "HTML-File-Location" }` and
 
 ## Parameters in Settings.json
 
@@ -44,10 +44,10 @@ write `{ "app" : "HTML-File-Location" }` and
 ```
 
 ## Steps to test/run your app:
-1. Add this line to the top of your main html file `<script src="./cwe-client.js"></script>` 
+1. Add this line to the top of your main html file `<script src="./cwe-client.js"></script>`
 
 ## Steps to build executable
-1. run `npm init`,it will create package.json file in the root of your app. Ignore if already has package.json in the root your of your app 
+1. run `npm init`,it will create package.json file in the root of your app. Ignore if already has package.json in the root your of your app
 2. run command `npm i chrome-runner path --save`.
 3. run command `cwe --build` to build executable.
 
@@ -55,5 +55,5 @@ write `{ "app" : "HTML-File-Location" }` and
 Major Bug Fixed
 
 ## What will be new:
-1. Website with all the needed guide
+1. Website will be released on 1<span style="font-size:9px">st</span> August,2022
 2. A complete designing library
