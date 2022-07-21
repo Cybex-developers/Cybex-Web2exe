@@ -42,17 +42,20 @@ write `{ "app" : "HTML-File-Location" }` and
     "resize": true
 }
 ```
+## Creating a new project
+execute command ```cwe --create```
 
 ## Steps to test/run your app:
-1. Add this line to the top of your main html file `<script src="./cwe-client.js"></script>`
+execute command ```cwe --run```
 
 ## Steps to build executable
-1. run `npm init`,it will create package.json file in the root of your app. Ignore if already has package.json in the root your of your app
-2. run command `npm i chrome-runner path --save`.
-3. run command `cwe --build` to build executable.
+execute command ```cwe --build```
 
 ## What's new :
-Major Bug Fixed
+1. Creating New project
+2. New command ```cwe --create```
+3. File Creation Automation
+4. Minor Bug Fixes
 
 ## What will be new:
 1. Website will be released on 1<span style="font-size:9px">st</span> August,2022

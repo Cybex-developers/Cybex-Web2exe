@@ -9,14 +9,14 @@ const create = require("./create.js");
 if (arg.includes("--run")) {
     run()
 }
-else if (arg.includes("--create")) {
-    create()
-}
 else if (arg.includes("--v") || arg.includes("--version")) {
     extras.cwe_version()
 }
 else if (arg.includes("--help")) {
     extras.cwe_help()
+}
+else if (arg.includes("--create")) {
+    create()
 }
 else if (arg.includes("--build")) {
     build()

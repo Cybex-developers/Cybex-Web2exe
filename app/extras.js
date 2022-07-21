@@ -2,7 +2,7 @@
 
 function cwe_unknown(){
     console.log(`please enter a valid argument, all available arguments are\n
- --v\n --version\n --help\n --build\n --run`);
+ --v\n --version\n --help\n --build\n --run\n -- create`);
 }
 function cwe_version(){
     console.log("v2022.1");
