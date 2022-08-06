@@ -52,11 +52,9 @@ execute command ```cwe --run```
 execute command ```cwe --build```
 
 ## What's new :
-1. Creating New project
-2. New command ```cwe --create```
-3. File Creation Automation
-4. Minor Bug Fixes
+1. File Creation Automation Improved
+2. Minor Bug Fixes
 
 ## What will be new:
-1. Website will be released on 1<span style="font-size:9px">st</span> August,2022
+1. Website will be released on 11<span style="font-size:9px">th</span> August,2022 on occassion of Raksha Bandhan
 2. A complete designing library
