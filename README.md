@@ -6,17 +6,7 @@ write `{ "app" : "HTML-File-Location" }` and
 
 ## Parameters in Settings.json
 
-|parameter|input value|Usage|
-|----|-----|-------|
-|name|string|Specifies the author name of the app|
-|author|string|Specifies the author name of the app|
-|version|string|Specifies the version of the app|
-|description|string|Specifies the description related to the app|
-|copyright|string|Specifies the Legal Copyright of the app|
-|height|number|specifies the height of the window|
-|width|number|specifies the width of the window|
-|start_maximized|true/false|tells whether the app has to started maximized or not|
-
+For details visit https://cybex-developers.github.io/Cybex_web2exe/docs
 
 ## Demo settings.json
 ```JSON
@@ -24,7 +14,7 @@ write `{ "app" : "HTML-File-Location" }` and
     "name": "Cybex Web2exe",
     "author": "Cybex Studios",
     "description": "A full fledged node module to make windows apps with web technologies like HTML,CSS,Javascript etc.",
-    "version": "2022.2.9",
+    "version": "2022.4.0",
     "copyright": "Copyright (c) Cybex Studios 2022",
     "app": "./public/index.html",
     "start_maximized": false,
@@ -52,9 +42,9 @@ execute command ```cwe --run```
 execute command ```cwe --build```
 
 ## What's new :
-1. File Creation Automation Improved
+1. Website released link: https://cybex-developers.github.io/Cybex_web2exe
 2. Minor Bug Fixes
 
 ## What will be new:
-1. Website will be released on 11<span style="font-size:9px">th</span> August,2022 on occassion of Raksha Bandhan
+1. Website will have some updates
 2. A complete designing library
