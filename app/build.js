@@ -2,7 +2,7 @@
 
 const path = require("path")
 const {exec} = require("pkg");
-const fs = require('fs');
+const fs = require('fs-extra');
 const PELibrary = require('pe-library');
 const ResEdit = require('resedit');
 const cFile = require("./files.js")
@@ -39,12 +39,12 @@ module.exports = function () {
                     parameters = parameters + "]";
                     cFile(data.app)
                     setTimeout(() => {
-            
+
                             let text = `
             const {launch} = require('chrome-runner');
             const path = require("path")
             __dirname = path.resolve();
-                
+
             const runner = launch(
                 {"startupPage": __dirname + "`+ data.app + `",
                 "chromeFlags": ` + parameters + `
@@ -110,9 +110,9 @@ module.exports = function () {
                                 fs.writeFileSync(data.name + ".exe", new Buffer.from(newBinary));
                                 console.log("build successful!")
                             })
-                            
+
                     }, 2);
-    
+
                 }
                 else{
                     console.log("Please specify the name of your application in settings.json");

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
+const fs = require('fs-extra');
 const readline = require('readline');
 const path = require("path");
 const child_process = require('child_process');

@@ -2,7 +2,7 @@
 
 const {launch} = require('chrome-runner');
 const path = require("path")
-const fs = require('fs');
+const fs = require('fs-extra');
 const cFile = require("./files.js")
 __dirname = path.resolve();
 

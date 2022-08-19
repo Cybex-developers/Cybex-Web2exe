@@ -1,5 +1,5 @@
 const path = require("path")
-const fs = require("fs");
+const fs = require('fs-extra');
 
 __dirname = path.resolve();
 module.exports = function (Htmlfile) {
