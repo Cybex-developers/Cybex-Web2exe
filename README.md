@@ -43,9 +43,10 @@ execute command ```cwe --build```
 ```
 
 ## What's new :
-1. Major Updates to website
-2. Minor Bug Fixes
+1. Major updates to website and stable website
+2. Minor update to core system.
+3. Minor Bug Fixes
 
 ## What will be new:
-1. Website will have some updates
+1. Updates to core system
 2. A complete designing library
