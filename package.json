@@ -29,5 +29,4 @@
     "bin": {
         "cwe": "./app/index.js"
     },
-    "files":["*", "**/*"]
 }
