@@ -1,3 +1,8 @@
+![version](https://img.shields.io/badge/release-2022.4.4-blue)
+![license](https://img.shields.io/badge/license-MIT-orange)
+![website](https://img.shields.io/badge/website-https%3A%2F%2Fcybex--developers.github.io%2FCybex__web2exe-blueviolet)
+![size](https://img.shields.io/badge/executable%20size-30mb%20uncompressed-%2308f)
+
 website link: https://cybex-developers.github.io/Cybex_web2exe
 
 # How to use cybex-web2exe
@@ -23,7 +28,7 @@ execute command ```cwe --build```
     "name": "Cybex Web2exe",
     "author": "Cybex Studios",
     "description": "A full fledged node module to make windows apps with web technologies like HTML, CSS, Javascript etc.",
-    "version": "2022.4.1",
+    "version": "2022.4.4",
     "copyright": "Copyright (c) Cybex Studios 2022",
     "app": "./public/index.html",
     "start_maximized": false,
@@ -43,10 +48,9 @@ execute command ```cwe --build```
 ```
 
 ## What's new :
-1. Major updates to website and stable website
-2. Minor update to core system.
-3. Minor Bug Fixes
+1. Minor update to core system.
+2. Minor Bug Fixes
 
 ## What will be new:
-1. Updates to core system
+1. Major update to core system
 2. A complete designing library

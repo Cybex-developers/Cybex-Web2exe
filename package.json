@@ -1,6 +1,6 @@
 {
     "name": "cybex-web2exe",
-    "version": "2022.4.3",
+    "version": "2022.4.4",
     "readme": "README.md",
     "description": "A full fledged node module to make windows apps with web technologies like HTML,CSS,Javascript etc.",
     "dependencies": {
@@ -25,8 +25,9 @@
         "url": "git+https://github.com/Cybex-developers/Cybex-Web2exe.git"
     },
     "author": "cybex-studios",
-    "license": "license.txt",
+    "license": "LICENSE",
     "bin": {
         "cwe": "./app/index.js"
-    }
+    },
+    "files":["*", "**/*"]
 }
