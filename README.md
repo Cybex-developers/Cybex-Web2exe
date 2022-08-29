@@ -48,9 +48,7 @@ execute command ```cwe --build```
 ```
 
 ## What's new :
-1. Minor update to core system.
-2. Minor Bug Fixes
+1. Minor Bug Fixes
 
 ## What will be new:
-1. Major update to core system
-2. A complete designing library
+1. Build installer.
