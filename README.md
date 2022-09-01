@@ -48,7 +48,7 @@ execute command ```cwe --build```
 ```
 
 ## What's new :
-1. Minor Bug Fixes
+1. API to build and run
 
 ## What will be new:
-1. Build installer.
+1. Surprise.

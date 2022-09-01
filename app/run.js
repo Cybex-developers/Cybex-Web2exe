@@ -40,7 +40,6 @@ module.exports = function () {
                         "chromeFlags": parameters
                     });
                     setTimeout(() => {
-
                         process.exit()
                     }, 2);
                 }, 2);
