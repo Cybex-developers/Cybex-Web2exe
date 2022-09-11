@@ -48,7 +48,7 @@ execute command ```cwe --build```
 ```
 
 ## What's new :
-1. API to build and run
+1. Minor Bug Fix
 
 ## What will be new:
-1. Surprise.
+1. Design Library on special occasion Dusshera.
