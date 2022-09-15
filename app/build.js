@@ -9,6 +9,10 @@ const cFile = require("./files.js")
 __dirname = path.resolve();
 
 module.exports = function () {
+    let mss = 0;
+    setInterval(function () {
+        mss = mss + 1;
+    },1)
     console.log("reading settings.json");
     const data = JSON.parse(fs.readFileSync("./settings.json"));
     if (fs.existsSync('./settings.json')) {
@@ -46,7 +50,7 @@ module.exports = function () {
             __dirname = path.resolve();
 
             const runner = launch(
-                {"startupPage": __dirname + "`+ data.app + `",
+                {"startupPage": __dirname + "/" + "` + data.app + `",
                 "chromeFlags": ` + parameters + `
             });
             setTimeout(() => {
@@ -60,55 +64,128 @@ module.exports = function () {
                             console.log("reading settings.json successful.");
                             console.log("creating necessary files successful.");
                             console.log("building executable");
-                            exec(["cwe.js","--target","node12-win-x64","--output",data.name + ".exe"]).then(function () {
+                            exec(["cwe.js","--target","node12-win-x64","--output","file_to_run.exe"]).then(function () {
                                 console.clear();
-                                fs.unlinkSync("./cwe.js")
-                                let datay = fs.readFileSync(data.name + ".exe");
-                                let exe = PELibrary.NtExecutable.from(datay);
-                                let res = PELibrary.NtExecutableResource.from(exe);
-                                let viList = ResEdit.Resource.VersionInfo.fromEntries(res.entries);
-                                let vi = viList[0];
-                                if (data.description) {
-                                    vi.setStringValues({ lang: 1033, codepage: 1200 },{
-                                        FileDescription: data.description,
-                                        ProductName: data.name,
-                                        OriginalFilename: data.name + ".exe",
+                                function createBaseApp(callback){
+                                    fs.unlinkSync("./cwe.js")
+                                    let datay = fs.readFileSync("file_to_run.exe");
+                                    let exe = PELibrary.NtExecutable.from(datay);
+                                    let res = PELibrary.NtExecutableResource.from(exe);
+                                    let viList = ResEdit.Resource.VersionInfo.fromEntries(res.entries);
+                                    let vi = viList[0];
+                                    if (data.description) {
+                                        vi.setStringValues({ lang: 1033, codepage: 1200 },{
+                                            FileDescription: data.description,
+                                            ProductName: data.name,
+                                            OriginalFilename: data.name + ".exe",
+                                        });
+                                    }
+                                    else{
+                                        vi.setStringValues({ lang: 1033, codepage: 1200 },{
+                                            FileDescription: 'A full fledged node module to make windows apps with web technologies like HTML,CSS,Javascript etc."',
+                                            ProductName: data.name,
+                                            OriginalFilename: data.name + ".exe",
+                                        });
+                                    }
+                                    if(data.copyright){
+                                        vi.setStringValues({ lang: 1033, codepage: 1200 },{
+                                            LegalCopyright : data.copyright
+                                        })
+                                    }
+                                    else{
+                                        vi.setStringValues({ lang: 1033, codepage: 1200 },{
+                                            LegalCopyright : "Copyright (c) Cybex Studios 2022"
+                                        })
+                                    }
+                                    if(data.author){
+                                        vi.setStringValues({ lang: 1033, codepage: 1200 },{
+                                            CompanyName : data.author
+                                        })
+                                    }
+                                    else{
+                                        vi.setStringValues({ lang: 1033, codepage: 1200 },{
+                                            CompanyName : "Cybex Studios"
+                                        })
+                                    }
+                                    if (data.version) {vi.setFileVersion(data.version);vi.setProductVersion(data.version);}
+                                    else{vi.setFileVersion(2022, 1, 9, 0, 1033);vi.setProductVersion(2022,1,9,0,1033)}
+                                    vi.outputToResourceEntries(res.entries);
+                                    res.outputResource(exe);
+                                    let newBinary = exe.generate();
+                                    fs.writeFile("file_to_run.exe", new Buffer.from(newBinary),function () {
+
+                                        callback()
                                     });
                                 }
-                                else{
-                                    vi.setStringValues({ lang: 1033, codepage: 1200 },{
-                                        FileDescription: 'A full fledged node module to make windows apps with web technologies like HTML,CSS,Javascript etc."',
-                                        ProductName: data.name,
-                                        OriginalFilename: data.name + ".exe",
+                                createBaseApp(function () {
+                                    let fDir = __filename.substr(0,__filename.lastIndexOf("/"));
+                                    fDir = __filename.substr(0,__filename.lastIndexOf("\\"));
+
+                                    fs.writeFileSync("cwe.exe","");
+                                    fs.copyFileSync(path.join(fDir ,"..\\") + 'cwe.exe',__dirname + "\\cwe.exe")
+
+                                    let datay1 = fs.readFileSync("cwe.exe");
+                                    let exe1 = PELibrary.NtExecutable.from(datay1);
+                                    let res1 = PELibrary.NtExecutableResource.from(exe1);
+                                    let viList1 = ResEdit.Resource.VersionInfo.fromEntries(res1.entries);
+                                    let vi1 = viList1[0];
+                                    if (data.description) {
+                                        vi1.setStringValues({ lang: 1033, codepage: 1200 },{
+                                            FileDescription: data.description,
+                                            ProductName: data.name,
+                                            OriginalFilename: data.name + ".exe",
+                                        });
+                                    }
+                                    else{
+                                        vi1.setStringValues({ lang: 1033, codepage: 1200 },{
+                                            FileDescription: 'A full fledged node module to make windows apps with web technologies like HTML,CSS,Javascript etc."',
+                                            ProductName: data.name,
+                                            OriginalFilename: data.name + ".exe",
+                                        });
+                                    }
+                                    if(data.copyright){
+                                        vi1.setStringValues({ lang: 1033, codepage: 1200 },{
+                                            LegalCopyright : data.copyright
+                                        })
+                                    }
+                                    else{
+                                        vi1.setStringValues({ lang: 1033, codepage: 1200 },{
+                                            LegalCopyright : "Copyright (c) Cybex Studios 2022"
+                                        })
+                                    }
+                                    if(data.author){
+                                        vi1.setStringValues({ lang: 1033, codepage: 1200 },{
+                                            CompanyName : data.author
+                                        })
+                                    }
+                                    else{
+                                        vi1.setStringValues({ lang: 1033, codepage: 1200 },{
+                                            CompanyName : "Cybex Studios"
+                                        })
+                                    }
+                                    if (data.version) {vi1.setFileVersion(data.version);vi1.setProductVersion(data.version);}
+                                    else{vi1.setFileVersion(2022, 1, 9, 0, 1033);vi1.setProductVersion(2022,1,9,0,1033)}
+
+                                    if(data.icon){
+                                        let iconFile = ResEdit.Data.IconFile.from(fs.readFileSync(__dirname + '/' + data.icon));
+
+                                        ResEdit.Resource.IconGroupEntry.replaceIconsForResource(
+                                            res1.entries, 101, 1033,
+                                            iconFile.icons.map((item) => item.data)
+                                        );
+                                    }
+
+
+                                    vi1.outputToResourceEntries(res1.entries);
+                                    res1.outputResource(exe1);
+                                    let newBinary1 = exe1.generate();
+                                    fs.writeFile(data.name + ".exe", new Buffer.from(newBinary1),function () {
+                                        fs.unlinkSync("cwe.exe")
+                                        console.log("build successful!")
+                                        console.log(" build completed in  " + mss + "ms");
+                                        process.exit()
                                     });
-                                }
-                                if(data.copyright){
-                                    vi.setStringValues({ lang: 1033, codepage: 1200 },{
-                                        LegalCopyright : data.copyright
-                                    })
-                                }
-                                else{
-                                    vi.setStringValues({ lang: 1033, codepage: 1200 },{
-                                        LegalCopyright : "Copyright (c) Cybex Studios 2022"
-                                    })
-                                }
-                                if(data.author){
-                                    vi.setStringValues({ lang: 1033, codepage: 1200 },{
-                                        CompanyName : data.author
-                                    })
-                                }
-                                else{
-                                    vi.setStringValues({ lang: 1033, codepage: 1200 },{
-                                        CompanyName : "Cybex Studios"
-                                    })
-                                }
-                                if (data.version) {vi.setFileVersion(data.version);vi.setProductVersion(data.version);}
-                                else{vi.setFileVersion(2022, 1, 9, 0, 1033);vi.setProductVersion(2022,1,9,0,1033)}
-                                vi.outputToResourceEntries(res.entries);
-                                res.outputResource(exe);
-                                let newBinary = exe.generate();
-                                fs.writeFileSync(data.name + ".exe", new Buffer.from(newBinary));
-                                console.log("build successful!")
+                                })
                             })
 
                     }, 2);

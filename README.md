@@ -34,6 +34,7 @@ execute command ```cwe --build```
     "start_maximized": false,
     "width": "600",
     "height": "440",
+    "icon": "./favicon.ico",
     "keys":{
         "zoom": false,
         "reload": true,
@@ -48,7 +49,9 @@ execute command ```cwe --build```
 ```
 
 ## What's new :
-1. Minor Bug Fix
+1. Major Bug Fixed
+2. Custom Icon option
+3. 3x faster start time
 
 ## What will be new:
 1. Design Library on special occasion Dusshera.

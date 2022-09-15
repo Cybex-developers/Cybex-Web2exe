@@ -36,7 +36,7 @@ module.exports = function () {
                 cFile(data.app)
                 setTimeout(() => {
                     const runner = launch(
-                        {"startupPage": __dirname + data.app,
+                        {"startupPage": __dirname + '/' + data.app,
                         "chromeFlags": parameters
                     });
                     setTimeout(() => {
