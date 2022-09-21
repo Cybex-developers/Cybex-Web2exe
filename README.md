@@ -49,8 +49,8 @@ execute command ```cwe --build```
 ```
 
 ## What's new :
-1. Major Bug Fixed
-2. Custom Icon option
+1. 2 Major Bugs Fixed
+2. Custom Icon option improved
 3. 3x faster start time
 
 ## What will be new:

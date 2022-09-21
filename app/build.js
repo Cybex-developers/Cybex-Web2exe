@@ -18,6 +18,20 @@ module.exports = function () {
     if (fs.existsSync('./settings.json')) {
         if (data.app != null) {
             if (fs.existsSync(data.app)) {
+                if(data.icon){
+                    if(fs.existsSync(__dirname + "/" + data.icon)){
+                        let iconF = data.icon.toString()
+                        if(iconF.substr(iconF.length - 4 ,iconF.length) == ".ico"){}
+                        else{
+                            console.log("icon file must be in .ico file format")
+                            process.exit();
+                        }
+                    }
+                    else{
+                        console.log("please specify a correct icon file location")
+                        process.exit();
+                    }
+                }
                 if (data.name != null) {
                     parameters = `["--app=" + __dirname + "` + data.app + `"`;
                     if (data.start_maximized == true) {

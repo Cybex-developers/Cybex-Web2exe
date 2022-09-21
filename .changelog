@@ -1,3 +1,1 @@
 1. Major Bug Fixed
-2. Custom Icon
-3. 3x faster start time
