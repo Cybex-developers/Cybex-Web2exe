@@ -49,9 +49,10 @@ execute command ```cwe --build```
 ```
 
 ## What's new :
-1. 3 Major Bugs Fixed
-2. Custom Icon option improved
-3. 3x faster start time
+1. 4 Major Bugs Fixed
+2. All Vulnerabilities fixed
+3. Custom Icon option improved
+4. 3x faster start time
 
 ## What will be new:
 1. Design Library on special occasion Dusshera.
