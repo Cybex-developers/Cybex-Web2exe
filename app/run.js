@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const {launch} = require('chrome-runner');
+const {Runner,launch,launchWithoutNoise,launchWithHeadless} = require('chrome-runner');
 const path = require("path")
 const fs = require('fs-extra');
 const cFile = require("./files.js")
@@ -34,14 +34,16 @@ module.exports = function () {
                     }
                 }
                 cFile(data.app)
-                setTimeout(() => {
-                    const runner = launch(
+                setTimeout(async () => {
+                    const runner = await launch(
                         {"startupPage": __dirname + '/' + data.app,
                         "chromeFlags": parameters
-                    });
+                    })
+                    //console.log(runner.chromeProcess.pid);
                     setTimeout(() => {
                         process.exit()
                     }, 2);
+
                 }, 2);
             }
             else{
