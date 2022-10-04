@@ -39,7 +39,6 @@ module.exports = function () {
                         {"startupPage": __dirname + '/' + data.app,
                         "chromeFlags": parameters
                     })
-                    //console.log(runner.chromeProcess.pid);
                     setTimeout(() => {
                         process.exit()
                     }, 2);
