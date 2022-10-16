@@ -48,11 +48,26 @@ execute command ```cwe --build```
 }
 ```
 
+## API :
+cwe.setSetting() - used to set a setting in the system so that it will be presreved when app restared <br>
+usage : cwe.setSetting("language","en-in") <br><br>
+
+cwe.getSetting() - returns a setting which you have set <br>
+usage : cwe.getSetting("language")  //will return en-in in the previous case <br><br>
+
+cwe.getAllSettings() - returns all the settings which you have set <br>
+usage : cwe.getAllSettings() <br><br>
+
+cwe.removeSetting() - remove a setting which you have set <br>
+usage : cwe.removeSetting("language")  //removes language setting<br><br>
+
+cwe.removeAllSettings() - removes all the settings which you have set <br>
+usage : cwe.removeAllSettings() <br><br>
+
+
 ## What's new :
-1. 4 Major Bugs Fixed
-2. All Vulnerabilities fixed
-3. Custom Icon option improved
-4. 3x faster start time
+1. API for setting, saving and getting appData
+2. Minor Bug Fixes
 
 ## What will be new:
 1. More features.
