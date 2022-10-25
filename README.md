@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/release-2022.5.5-blue)
+![version](https://img.shields.io/badge/release-2022.5.7-blue)
 ![license](https://img.shields.io/badge/license-MIT-orange)
 ![website](https://img.shields.io/badge/website-https%3A%2F%2Fcybex--developers.github.io%2FCybex__web2exe-blueviolet)
 ![size](https://img.shields.io/badge/executable%20size-30mb%20uncompressed-%2308f)
@@ -66,8 +66,7 @@ usage : cwe.removeAllSettings() <br><br>
 
 
 ## What's new :
-1. API for setting, saving and getting appData
-2. Minor Bug Fixes
+1. Minor Bug Fixes
 
 ## What will be new:
 1. More features.
