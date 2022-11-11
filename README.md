@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/release-2022.5.7-blue)
+![version](https://img.shields.io/badge/release-2022.5.8-blue)
 ![license](https://img.shields.io/badge/license-MIT-orange)
 ![website](https://img.shields.io/badge/website-https%3A%2F%2Fcybex--developers.github.io%2FCybex__web2exe-blueviolet)
 ![size](https://img.shields.io/badge/executable%20size-30mb%20uncompressed-%2308f)
@@ -28,7 +28,7 @@ execute command ```cwe --build```
     "name": "Cybex Web2exe",
     "author": "Cybex Studios",
     "description": "A full fledged node module to make windows apps with web technologies like HTML, CSS, Javascript etc.",
-    "version": "2022.5.5",
+    "version": "2022.5.8",
     "copyright": "Copyright (c) Cybex Studios 2022",
     "app": "./public/index.html",
     "start_maximized": false,
