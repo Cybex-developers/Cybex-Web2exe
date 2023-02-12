@@ -1,4 +1,4 @@
-![version](https://img.shields.io/badge/release-2022.5.8-blue)
+![version](https://img.shields.io/badge/release-2022.6.0-blue)
 ![license](https://img.shields.io/badge/license-MIT-orange)
 ![website](https://img.shields.io/badge/website-https%3A%2F%2Fcybex--developers.github.io%2FCybex__web2exe-blueviolet)
 ![size](https://img.shields.io/badge/executable%20size-30mb%20uncompressed-%2308f)
@@ -28,7 +28,7 @@ execute command ```cwe --build```
     "name": "Cybex Web2exe",
     "author": "Cybex Studios",
     "description": "A full fledged node module to make windows apps with web technologies like HTML, CSS, Javascript etc.",
-    "version": "2022.5.8",
+    "version": "2022.6.0",
     "copyright": "Copyright (c) Cybex Studios 2022",
     "app": "./public/index.html",
     "start_maximized": false,
@@ -66,7 +66,9 @@ usage : cwe.removeAllSettings() <br><br>
 
 
 ## What's new :
-1. Minor Bug Fixes
+1. Major Core Change
+2. Perfomance Improvements
+3. Regular Updates are back
 
 ## What will be new:
-1. More features.
+1. Features based on new core.

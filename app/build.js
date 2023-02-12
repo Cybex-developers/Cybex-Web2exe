@@ -66,10 +66,10 @@ module.exports = function () {
             const runner = launch(
                 {"startupPage": __dirname + "/" + "` + data.app + `",
                 "chromeFlags": ` + parameters + `
-            });
-            setTimeout(() => {
+            }).then(function (Runner) {
+                console.log(Runner.chromeProcess.pid);
                 process.exit()
-            }, 2);`
+            });`
                             console.clear()
                             console.log("reading settings.json successful.");
                             console.log("creating necessary files.");
