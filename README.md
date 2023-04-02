@@ -3,15 +3,13 @@
 ![website](https://img.shields.io/badge/website-https%3A%2F%2Fcybex--developers.github.io%2FCybex__web2exe-blueviolet)
 ![size](https://img.shields.io/badge/executable%20size-30mb%20uncompressed-%2308f)
 
-website link: https://cybex-developers.github.io/Cybex_web2exe
-
 # How to use cybex-web2exe
 
 make a settings.json file in the root of the app
 write `{ "app" : "HTML-File-Location" }` and
 
 ## Parameters in Settings.json
-For details visit https://cybex-developers.github.io/Cybex_web2exe/docs
+For detailed documentation, visit https://cybex-developers.github.io/Cybex_web2exe
 
 ## Creating a new project
 execute command ```cwe --create```
@@ -28,8 +26,8 @@ execute command ```cwe --build```
     "name": "Cybex Web2exe",
     "author": "Cybex Studios",
     "description": "A full fledged node module to make windows apps with web technologies like HTML, CSS, Javascript etc.",
-    "version": "2022.6.0",
-    "copyright": "Copyright (c) Cybex Studios 2022",
+    "version": "2022.6.1",
+    "copyright": "Copyright (c) Cybex Studios 2023",
     "app": "./public/index.html",
     "start_maximized": false,
     "width": "600",
@@ -66,9 +64,7 @@ usage : cwe.removeAllSettings() <br><br>
 
 
 ## What's new :
-1. Major Core Change
-2. Perfomance Improvements
-3. Regular Updates are back
+1. This project has been deprecated
 
 ## What will be new:
-1. Features based on new core.
+There will be no new features as the product is already deprecated

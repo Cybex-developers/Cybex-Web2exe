@@ -1,6 +1,6 @@
 {
     "name": "cybex-web2exe",
-    "version": "2022.6.0",
+    "version": "2022.6.1",
     "readme": "README.md",
     "main": "./main.js",
     "description": "A full fledged node module to make windows apps with web technologies like HTML,CSS,Javascript etc.",
